@@ -1,0 +1,117 @@
+import { Earth, Languages, Swords, Flag, Map as MapIcon, Landmark } from "lucide-react";
+
+export const GAMES_INFO = [
+  {
+    slug: "globale",
+    name: "Globale",
+    tagline: "Geografia",
+    icon: Earth,
+    cardBg: "bg-sky-200 hover:bg-sky-300",
+    badgeBg: "bg-sky-400",
+    summary: "Adivinhe o país do dia, letra por letra.",
+    rules: [
+      "O país do dia é escondido. O tabuleiro mostra quantas letras ele tem.",
+      "Se o nome tiver mais de uma palavra (ex.: Coreia do Sul), a separação aparece.",
+      "Você tem 6 tentativas. Digite um país com o mesmo número de letras.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "Letra certa no lugar certo" },
+      { color: "bg-amber-300", text: "A letra existe, mas em outra posição" },
+      { color: "bg-slate-300", text: "A letra não existe no país" },
+    ],
+  },
+  {
+    slug: "idiomale",
+    name: "Idiomale",
+    tagline: "Idiomas",
+    icon: Languages,
+    cardBg: "bg-emerald-200 hover:bg-emerald-300",
+    badgeBg: "bg-emerald-400",
+    summary: "Adivinhe o país pelo idioma da frase.",
+    rules: [
+      "Uma frase em outro idioma aparece na tela. Descubra em que país ela é falada.",
+      "Vários países compartilham o mesmo idioma, então use as dicas dos palpites para fechar o cerco.",
+      "Você tem 6 tentativas.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "🌍 Continente e 🧭 hemisfério: verde se for o mesmo da resposta" },
+      { color: "bg-amber-300", text: "👥 População: seta para cima = a resposta tem mais habitantes; para baixo = menos" },
+    ],
+  },
+  {
+    slug: "conflitale",
+    name: "Conflitale",
+    tagline: "História",
+    icon: Swords,
+    cardBg: "bg-rose-200 hover:bg-rose-300",
+    badgeBg: "bg-rose-400",
+    summary: "Adivinhe o ano de início de um conflito histórico.",
+    rules: [
+      "Você vê o nome e a descrição de um conflito. Chute o ano em que ele começou.",
+      "Para anos antes de Cristo, use número negativo (ex.: -264 para 264 a.C.).",
+      "Você tem 6 tentativas.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "Acertou o ano" },
+      { color: "bg-amber-300", text: "Muito perto: até 5 anos de diferença" },
+      { color: "bg-orange-300", text: "Perto: até 20 anos" },
+      { color: "bg-slate-200", text: "Longe (até 50) ou muito longe (mais de 50)" },
+      { color: "bg-slate-100", text: "Seta para cima = foi depois; para baixo = foi antes" },
+    ],
+  },
+  {
+    slug: "bandeirale",
+    name: "Bandeirale",
+    tagline: "Bandeiras",
+    icon: Flag,
+    cardBg: "bg-amber-200 hover:bg-amber-300",
+    badgeBg: "bg-amber-400",
+    summary: "Adivinhe o país pela bandeira histórica.",
+    rules: [
+      "A bandeira é de um país ou entidade que não existe mais. Descubra qual.",
+      "A região aparece desde o início como pista.",
+      "Escolha o palpite na lista de sugestões. Você tem 6 tentativas.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "Região igual à da resposta" },
+      { color: "bg-amber-300", text: "Seta para cima = a resposta surgiu depois; para baixo = antes" },
+    ],
+  },
+  {
+    slug: "vizinhale",
+    name: "Vizinhale",
+    tagline: "Fronteiras",
+    icon: MapIcon,
+    cardBg: "bg-violet-200 hover:bg-violet-300",
+    badgeBg: "bg-violet-400",
+    summary: "Descubra o país pela lista de vizinhos.",
+    rules: [
+      "A lista completa de países vizinhos aparece na tela. Deduza qual país faz fronteira com todos eles.",
+      "Cada palpite acende, na lista, os vizinhos que o país chutado também tem.",
+      "Você tem 6 tentativas.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "Vizinho da lista que o seu palpite também tem" },
+      { color: "bg-amber-300", text: "🤝 Quantos vizinhos em comum com a resposta" },
+      { color: "bg-slate-200", text: "🧭 Marca ✓ se o país chutado faz fronteira com a resposta" },
+    ],
+  },
+  {
+    slug: "independenciale",
+    name: "Independênciale",
+    tagline: "História",
+    icon: Landmark,
+    cardBg: "bg-red-200 hover:bg-red-300",
+    badgeBg: "bg-red-300",
+    summary: "Adivinhe o ano ou o país da independência.",
+    rules: [
+      "Tem dois modos por dia. No modo Ano, você vê o país e chuta o ano da independência.",
+      "No modo País, você vê o ano e chuta o país.",
+      "No modo País, as dicas são continente, colonizador e população. O colonizador ajuda a separar anos com várias independências, como 1960, o Ano da África.",
+    ],
+    legend: [
+      { color: "bg-emerald-400", text: "Dica igual à da resposta" },
+      { color: "bg-amber-300", text: "Setas indicam se a resposta é maior ou menor (ano ou população)" },
+    ],
+  },
+];

@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { Earth, Languages, Swords, Flag, Lock, ArrowUpRight } from "lucide-react";
+import {
+  Earth,
+  Languages,
+  Swords,
+  Flag,
+  Lock,
+  ArrowUpRight,
+  Scroll,
+  Map
+} from "lucide-react";
 
 const GAMES = [
   {
@@ -42,12 +51,32 @@ const GAMES = [
     badgeBg: "bg-amber-400",
     available: true,
   },
+  {
+    slug: "independenciale",
+    name: "Independênciale",
+    tagline: "História",
+    description: "Adivinhe o país pelo ano de sua independência ou vice-versa.",
+    icon: Scroll,
+    cardBg:
+      "bg-red-300 hover:bg-red-400 border-3 border-slate-950 shadow-[4px_4px_0px_0px_#011]",
+    badgeBg: "bg-red-400 text-slate-950 border border-slate-950",
+    available: true,
+  },
+  {
+    slug: "vizinhale",
+    name: "Vizinhale",
+    tagline: "Fronteiras",
+    description: "Descubra o país pela lista de vizinhos.",
+    icon: Map,
+    cardBg: "bg-violet-300 hover:bg-violet-400",
+    badgeBg: "bg-violet-400",
+    available: true,
+  },
 ];
 
 export default function HubHome() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center justify-between p-4 sm:p-8">
-      
       {/* Cabeçalho */}
       <header className="w-full max-w-4xl mt-4 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-2">
         <div>
@@ -63,7 +92,9 @@ export default function HubHome() {
         </div>
 
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-md sm:text-right">
-          No <strong className="text-amber-300">Meridiano</strong>, você encontra desafios diários de geografia, idiomas e história. Um jogo novo a cada dia, de graça.
+          No <strong className="text-amber-300">Meridiano</strong>, você
+          encontra desafios diários de geografia, idiomas e história. Um jogo
+          novo a cada dia, de graça.
         </p>
       </header>
 
@@ -134,9 +165,10 @@ export default function HubHome() {
       {/* Rodapé */}
       <footer className="w-full max-w-4xl pt-8 mt-6 text-center text-slate-400 text-xs sm:text-sm space-y-1">
         <p>Feito com curiosidade por geografia, idiomas e história do mundo.</p>
-        <p className="text-slate-500 font-medium">Meridiano · {new Date().getFullYear()}</p>
+        <p className="text-slate-500 font-medium">
+          Meridiano · {new Date().getFullYear()}
+        </p>
       </footer>
-
     </div>
   );
 }
