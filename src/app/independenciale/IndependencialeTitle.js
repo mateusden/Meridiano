@@ -3,7 +3,7 @@ import { Scroll } from "lucide-react";
 export default function IndependencialeTitle() {
   return (
     <h1
-      className="flex items-center justify-center text-4xl sm:text-5xl font-black tracking-tight text-slate-950 select-none my-1"
+      className="flex items-center justify-center text-[2-rem] sm:text-5xl font-black tracking-tight text-slate-950 select-none my-1"
       style={{ fontFamily: "var(--font-title)" }}
     >
       <span>INDEPENDÊNCIA</span>

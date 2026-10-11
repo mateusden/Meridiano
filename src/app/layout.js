@@ -13,12 +13,27 @@ const titleFont = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Meridiano",
-  description: "Um desafio novo a cada dia — geografia, idiomas e história.",
+  metadataBase: new URL("https://globale-nine.vercel.app"),
+  title: "Meridiano - jogos diários de geografia, idiomas e história",
+  description:
+    "Meridiano reúne jogos diários gratuitos: adivinhe o país do dia, o idioma de uma frase, o ano de um conflito e bandeiras históricas. Um desafio novo a cada dia.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Meridiano - jogos diários de geografia, idiomas e história",
+    description:
+      "Desafios diários gratuitos de geografia, idiomas e história. Um jogo novo a cada dia.",
+    url: "/",
+    siteName: "Meridiano",
+    locale: "pt_BR",
+    type: "website",
+  },
   icons: {
-    icon: '/compass.ico'
-  }
+    icon: "/compass.ico",
+  },
+  // Quando o Google Search Console te der o código de verificação, descomente:
+  verification: { google: "ympSbKr42CtbDdXP1n1emWZaX-ChY7MH3UYsji-llzM" },
 };
+
 
 export default function RootLayout({ children }) {
   return (
